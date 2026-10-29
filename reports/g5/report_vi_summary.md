@@ -42,7 +42,7 @@ Bitext có nhiều mẫu câu tổng hợp và mẫu lặp. Ví dụ, hai nhãn 
 
 E5 tăng macro-F1 validation so với bốn mô hình BoW/TF-IDF. Tuy nhiên, challenge final cho thấy lỗi khi gặp phủ định, yêu cầu mơ hồ và câu ngoài phạm vi. Vì vậy, sản phẩm giữ bước hỏi làm rõ và thông báo giới hạn dịch vụ. Không thể xem bản demo là hệ thống chăm sóc khách hàng thật.
 
-Báo cáo tiếng Anh đầy đủ, README, video và gói nộp cần được kiểm tra trước hạn cuối. Môi trường cài đặt sạch cũng cần kiểm tra. Thông tin nộp bài hiện chưa thống nhất giữa PDF đề và kế hoạch cập nhật. Bảng đóng góp cuối cần điền tên và mã số sinh viên: một thành viên, 100%.
+Báo cáo PDF cuối, video và gói nộp cần được kiểm tra trước hạn cuối. Clone tạm đã tái tạo đúng hash dữ liệu chia và artifact E5. Thông tin nộp bài hiện chưa thống nhất giữa PDF đề và kế hoạch cập nhật. Bảng đóng góp cuối cần điền tên và mã số sinh viên: một thành viên, 100%.
 
 ### Nguồn số liệu nội bộ
 

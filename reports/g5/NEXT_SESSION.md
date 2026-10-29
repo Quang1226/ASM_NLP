@@ -1,32 +1,31 @@
-# G5 handoff — resume on 29 October 2026
+# G5 status — 29 October 2026
 
 Read this file at the start of the next working session. Workspace: `/Users/duyquang/Documents/NLP_ASM`.
 
-## State at handoff (28 October 2026)
+## Current state
 
 - G1–G4 are complete. G3's E5 model, thresholds, test evaluation and challenge-final evaluation are frozen. Do **not** select or retune a model using test or challenge-final results.
 - The student approved all 27 intent responses and all four fallback responses for Demo Tech Store. `data/kb/tech_store_kb.json` records approval; see `reports/g5/kb_approval.md` for the hash and evidence. Ghost-UI wording was replaced with explicit real-store or simulated-process wording.
 - The existing local demo SQLite seed replies refreshed on API restart: 27/27 match the approved KB. The browser chat returned the approved `KB-TRACK-ORDER` response. All 17 tests passed.
 - The latest G4 UI is white/technology blue with the old-style widget, admin workspace, semantic action colors, AI diagnostics, contextual clarify chips and 13px chat text. See `reports/g4/implementation.md`.
-- No Git repository exists yet in `NLP_ASM`; the student said they would create it. No root `requirements.txt` exists yet. No final report PDF or demo video exists yet.
+- Git repository `Quang1226/ASM_NLP` has a first commit, `a81b9d14f273456654eb7c719b1dd9c20680813b`. The root `requirements.txt`, English README, report drafts, and detailed demo script exist. The final report PDF and demo video do not yet exist.
+- A fresh Python environment installed dependencies and passed 17 tests. A temporary empty clone reproduced split hashes, E1–E5 validation results, E5 artifact hashes, and a real-model API/chat response. Frontend `npm ci`, build, and audit passed after updating Vite to 8.3.5. See `reports/g5/submission_readiness_check.md`.
+- The Vite package files, Python dependency pins, data-download fix, model-restoration script, README, and G5 reports have uncommitted local changes. A final fixed commit or tag must be created after these and the final submission files are pushed.
 - Official deadline reported by the student: **30 November 2026**. The Google Form reportedly accepts one file up to 100 MB. Whether a PDF containing GitHub/video links satisfies the source/demo submission requirement remains to be confirmed with the instructor.
-
-## First work tomorrow
-
-1. Read this handoff, `docs/planning/IMPLEMENTATION_PLAN.md` (G5), `reports/g3/final_report.md`, `reports/g4/implementation.md`, and `reports/g5/kb_approval.md`.
-2. Build the **English report outline and evidence map** for the required eight sections: Introduction, Related Work, Dataset Description, Methodology, Experiments, Results, Error Analysis, Conclusion. Map every reported number and figure to an existing artifact before drafting prose. Include the one-student/100% contribution statement.
-3. Ask the student only for genuinely missing report details, especially their preferred name/student ID and any instructor guidance on the one-file submission. Continue report work while waiting for answers.
 
 ## Remaining G5 checklist, in dependency order
 
-- [ ] Draft and verify the eight-section report. Use the frozen G1–G3 counts and metrics; include per-class results, confusion matrix, representative errors, model size/latency, Bitext template limitations, and the disclosed challenge-final limitation (13/22 actions; not fully blind). Explain G4 as a local simulated application, not a production customer-service system.
-- [ ] Create a root `requirements.txt` with direct, pinned project dependencies consistent with `pyproject.toml`; do not dump the whole local environment with `pip freeze`. Test installation and reproducibility in a clean environment.
-- [ ] Finish the English README for an external marker: purpose, architecture, pinned Bitext/encoder provenance and licenses, setup, exact data/training/evaluation/demo commands, verified results, model/KB limitations, and reused-code provenance. Do not re-evaluate the held-out test to choose a model.
-- [ ] Prepare a short demo script and capture guide/clarify/scope-boundary/handoff plus diagnostics and admin knowledge views using fake data. Record and host the video only after the student agrees on destination/account; include the final link in the report.
-- [ ] After the student creates the Git repository, inspect ignore rules and repository size; commit or push only with user authorization. Link a fixed commit/tag in the report rather than a moving branch URL.
-- [ ] Build the final PDF, visually inspect all pages, verify links and all numeric claims, and include the one-member/100% contribution table.
-- [ ] Validate a fresh setup: install, tests, frontend build, actual model/API/chat, and absence of secrets, personal contact records, old VNJ DB, caches and unnecessary large artifacts from the submission package.
-- [ ] Confirm the instructor's rule for one uploaded file. Preferred if allowed: PDF under 100 MB with fixed GitHub and demo-video links. If source must be inside the upload and ZIP is accepted: one ZIP containing PDF plus safe source. Do not submit until the route is confirmed.
+- [x] Draft the eight-section English report and Vietnamese summary from frozen G1–G4 evidence. Include per-class results, confusion matrix, errors, latency, and disclosed challenge-final limits.
+- [x] Create root `requirements.txt` with direct pins matching `pyproject.toml`; install it in a fresh Python environment.
+- [x] Finish the English README with source and encoder provenance, setup, commands, results, demo, limits, and code-reuse record.
+- [x] Prepare the detailed demo script and verify four route prompts against the real API.
+- [ ] **Student:** record and host the demo video; add its final link to the report.
+- [x] Inspect the Git repository, ignore rules, tracked file size, and first fixed commit.
+- [ ] Push the latest G5 documentation and Vite dependency fix, then replace the report's first-commit link with a final fixed commit or tag.
+- [ ] **Student / report finalization:** provide name and student ID; build and visually inspect the final PDF, verify links and numbers, and complete the one-member/100% contribution table.
+- [x] Validate fresh dependency installation, 17 tests, frontend clean install/build, real model/API/chat, and tracked-file privacy/size scan. See the readiness report.
+- [x] Reproduce data preparation and E1–E5 from an empty clone. The restored E5 artifacts matched frozen hashes and served chat. The held-out test and challenge-final reports were not rerun.
+- [ ] **Student:** confirm the instructor's current upload route and one-file rule. Then assemble a compliant file under 100 MB.
 
 ## Important source files
 
@@ -37,4 +36,4 @@ Read this file at the start of the next working session. Workspace: `/Users/duyq
 
 ## Completion criterion
 
-Another person can follow the README to reproduce the experiments and run the local demo; the report matches frozen artifacts; the final single uploaded file satisfies the Google Form's format and 100 MB limit.
+Another person can follow the README to reproduce the experiments and run the local demo; the report matches frozen artifacts; the final uploaded file satisfies the instructor's current route and 100 MB limit. This gate remains open until the unchecked items above are complete.

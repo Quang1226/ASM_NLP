@@ -22,10 +22,10 @@ python3.12 -m venv .venv
 .venv/bin/python scripts/audit_challenge.py
 .venv/bin/python scripts/audit_data.py
 .venv/bin/python scripts/train_g2.py
-.venv/bin/python scripts/train_e5.py
+.venv/bin/python scripts/restore_frozen_model.py
 ```
 
-The raw CSV is checked against a pinned SHA-256. The split script checks its frozen input and configuration. `train_e5.py` downloads the pinned encoder once. Do not rerun `freeze_g3.py` or `evaluate_g3_final.py` in this checkout: their existing frozen reports are the one-time final evaluation. Those scripts refuse to overwrite it. Check their saved hashes in `reports/g3/frozen_bundle.json` and `reports/g3/final_evaluation.json`.
+The raw CSV is checked against a pinned SHA-256. The split script checks its frozen input and configuration. `restore_frozen_model.py` downloads the pinned encoder once, trains E5 in a temporary folder, and copies artifacts only when their SHA-256 values match the frozen bundle. It does not change the saved reports. Do not rerun `freeze_g3.py` or `evaluate_g3_final.py` in this checkout: their existing reports are the one-time final evaluation. Those scripts refuse to overwrite it.
 
 Check the local app after training:
 
@@ -92,7 +92,7 @@ E5 uses the frozen [all-MiniLM-L6-v2](https://huggingface.co/sentence-transforme
 .venv/bin/python scripts/evaluate_g3_final.py
 ```
 
-These three commands document the original G3 order. In this checkout, run `train_e5.py` to recreate local model files, but keep the existing frozen and final reports. `freeze_g3.py` uses only validation and approved challenge `tuning` rows. `evaluate_g3_final.py` refuses a repeat once the final report exists. See `reports/g3/` for classifier, policy, predictions, and limits. Classifier probability is **not** a calibrated in-scope probability. Scope decisions also check maximum cosine similarity to frozen training embeddings.
+These three commands document the original G3 order. In the submitted checkout, use `restore_frozen_model.py` instead of rerunning them. `train_e5.py` refuses to run while the frozen bundle exists, and the other scripts protect the one-time final reports. See `reports/g3/` for classifier, policy, predictions, and limits. Classifier probability is **not** a calibrated in-scope probability. Scope decisions also check maximum cosine similarity to frozen training embeddings.
 
 | Model | Representation and classifier | Validation macro-F1 |
 | --- | --- | ---: |

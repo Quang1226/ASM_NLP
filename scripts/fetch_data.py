@@ -3,9 +3,12 @@
 from __future__ import annotations
 
 import json
+import ssl
 import sys
 import urllib.request
 from pathlib import Path
+
+import certifi
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
@@ -20,7 +23,8 @@ def main() -> None:
     else:
         temporary = RAW_PATH.with_suffix(".csv.partial")
         try:
-            with urllib.request.urlopen(URL, timeout=120) as response, temporary.open("wb") as output:
+            tls_context = ssl.create_default_context(cafile=certifi.where())
+            with urllib.request.urlopen(URL, timeout=120, context=tls_context) as response, temporary.open("wb") as output:
                 while block := response.read(1024 * 1024):
                     output.write(block)
             observed = sha256_file(temporary)

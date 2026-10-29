@@ -5,3 +5,10 @@ joblib==1.5.3
 sentence-transformers==6.1.0
 fastapi==0.162.0
 uvicorn==0.54.0
+certifi==2026.10.23
+# Freeze model-critical transitive libraries for reproducible E5 artifacts.
+torch==2.11.0
+transformers==5.17.0
+huggingface-hub==1.32.0
+numpy==2.2.2
+scipy==1.17.1

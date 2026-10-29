@@ -3,7 +3,7 @@
 **Course:** Natural Language Processing, Semester I 2026–2027  
 **Project type:** Individual project  
 **Student name and ID:** To be inserted by the student before submission  
-**Report status:** Draft based on frozen G1–G4 evidence, 29 October 2026
+**Report status:** Draft based on frozen G1–G4 evidence; final PDF and submission links pending
 
 ## 1. Introduction
 
@@ -193,7 +193,7 @@ The challenge result changes the practical conclusion. Only 13 of 22 final actio
 
 ### Reproducibility and contribution
 
-The dataset and encoder revisions, split hashes, model bundle, scripts, and machine-readable results are stored with the project. The final README must still pass a clean-environment reproduction check. The code repository and demo-video links will be added only after they exist and their final locations are confirmed.
+The dataset and encoder revisions, split hashes, model bundle, scripts, and machine-readable results are stored with the project. A fresh Python environment passed installation and tests. A temporary empty clone reproduced the split hashes, E1–E5 validation scores, E5 classifier hash, and training-embedding hash. Its restored model served a local API chat. The held-out test and challenge-final reports were not rerun. The first source snapshot is [commit a81b9d1](https://github.com/Quang1226/ASM_NLP/commit/a81b9d14f273456654eb7c719b1dd9c20680813b). Replace this link with the final commit or tag after all G5 files are pushed. Add the demo-video link after recording and hosting.
 
 | Member | Student ID | Work | Contribution |
 | --- | --- | --- | ---: |
