@@ -1,0 +1,129 @@
+{
+  "bundle_version": "g3-v1-2026-10-28",
+  "frozen_at_utc": "2026-10-28T14:08:25.263698+00:00",
+  "selected_experiment": "E5",
+  "selection_basis": "highest validation macro-F1 among E3, E4, E5; policy selected on challenge tuning under validation refusal guards",
+  "comparison": [
+    {
+      "experiment": "E3",
+      "validation_macro_f1": 0.984594,
+      "validation_accuracy": 0.985677
+    },
+    {
+      "experiment": "E4",
+      "validation_macro_f1": 0.984585,
+      "validation_accuracy": 0.985391
+    },
+    {
+      "experiment": "E5",
+      "validation_macro_f1": 0.989829,
+      "validation_accuracy": 0.990261,
+      "tuning_inscope_intent_accuracy": 0.714286
+    }
+  ],
+  "classifier": {
+    "experiment": "E5",
+    "C": 10.0,
+    "accuracy": 0.990261,
+    "macro_precision": 0.989783,
+    "macro_recall": 0.990112,
+    "macro_f1": 0.989829,
+    "fit_seconds": 0.411,
+    "model_file": "artifacts/g3/E5_classifier.joblib",
+    "model_sha256": "2301b7d4e90ec5eb8bcb2fd80281a5ade4fc4521e860c06cfa7a1cd9379bdfd3",
+    "model_bytes": 81519
+  },
+  "encoder": {
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "license": "Apache-2.0",
+    "input": "original instruction text, no G2 lemmatization",
+    "device": "cpu"
+  },
+  "train_embedding": {
+    "split": "train",
+    "rows": 16849,
+    "dimensions": 384,
+    "split_sha256": "23324901f6a6daae20751e4f45d97e267949fe7a59d5f4d6bafb73496101b6f4",
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "license": "Apache-2.0",
+    "batch_size": 64,
+    "device": "cpu",
+    "normalized": true,
+    "encode_seconds": 15.992,
+    "file": "artifacts/g3/embeddings/train-8f3152cc757b8d47df54.npy",
+    "file_sha256": "417c8e996bc62a0a2468c595b0f7bcf2ad3a15620689e0f4ad2d84b5e2171c96"
+  },
+  "validation_embedding": {
+    "split": "validation",
+    "rows": 3491,
+    "dimensions": 384,
+    "split_sha256": "537bc1652bd5379ecc728ea11768691202adbe8fbd9c59fe811e01d37721bd13",
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "license": "Apache-2.0",
+    "batch_size": 64,
+    "device": "cpu",
+    "normalized": true,
+    "encode_seconds": 4.135,
+    "file": "artifacts/g3/embeddings/validation-98e4ad763c2fc513e5ec.npy",
+    "file_sha256": "98b9a17b133ef3e9c69109e98f17caa038f004ff0a41564f144f9ba605fe6064"
+  },
+  "challenge_tuning_embedding": {
+    "split": "challenge_tuning",
+    "rows": 22,
+    "dimensions": 384,
+    "split_sha256": "599a77fbd7d8a233d915a87ac28b5d54e6e52d658b52524ce7578fb0a2368c07",
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "license": "Apache-2.0",
+    "batch_size": 64,
+    "device": "cpu",
+    "normalized": true,
+    "encode_seconds": 0.191,
+    "file": "artifacts/g3/embeddings/challenge_tuning-42b9817e0844e4b6aa0e.npy",
+    "file_sha256": "f3552c7c5e3937a23e1d9bab8932fb5ad60cc4edeabe650ea5b1220f7439032a"
+  },
+  "split_version": "v1-strict-2026-10-28",
+  "split_hashes": {
+    "train": "23324901f6a6daae20751e4f45d97e267949fe7a59d5f4d6bafb73496101b6f4",
+    "validation": "537bc1652bd5379ecc728ea11768691202adbe8fbd9c59fe811e01d37721bd13",
+    "test": "022a0b30621a58c04b830b2e8fda2b1e9fb800efda1d0bc508952ebdfaa3b018"
+  },
+  "challenge_version": "v1-approved-2026-10-28",
+  "challenge_sha256": "599a77fbd7d8a233d915a87ac28b5d54e6e52d658b52524ce7578fb0a2368c07",
+  "policy": {
+    "scope_similarity_threshold": 0.396708,
+    "clarify_probability_threshold": 0.663174,
+    "score_type": "E5 LogisticRegression.predict_proba; not calibrated as OOS probability",
+    "nearest_score_type": "maximum cosine similarity against frozen normalized training embeddings",
+    "human_request_rule": "\\b(real (?:support )?person|human (?:agent|support)|live agent|talk to (?:a )?person)\\b",
+    "selection_rule": "Minimize weighted challenge-tuning action loss (scope miss=5, ambiguity miss=3, handoff miss=2, guide rejection=1), subject to <=1% validation scope refusals and <=3% validation confidence clarifications; ties favor guide coverage.",
+    "validation_scope_refusal_rate": 0.0,
+    "validation_confidence_clarification_rate": 0.020624,
+    "tuning_action_accuracy": 0.590909,
+    "tuning_by_action": {
+      "clarify": {
+        "correct": 4,
+        "total": 4
+      },
+      "guide": {
+        "correct": 4,
+        "total": 13
+      },
+      "handoff": {
+        "correct": 1,
+        "total": 1
+      },
+      "scope_boundary": {
+        "correct": 4,
+        "total": 4
+      }
+    }
+  },
+  "tuning_inscope_intent_count": 14,
+  "tuning_inscope_intent_correct": 10,
+  "test_used": false,
+  "challenge_final_used": false
+}

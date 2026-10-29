@@ -1,0 +1,23 @@
+id,scenario,utterance,expected_intent,predicted_intent,confidence,nearest_train_cosine,expected_action,predicted_action
+F01,paraphrase,The SSD in my laptop order is the wrong capacity. Can I change it before shipment?,change_order,change_order,0.927786,0.415543,guide,guide
+F02,refund_distinction,Has the refund for my wireless earbuds been sent back to my card yet?,track_refund,track_refund,0.883956,0.60278,guide,guide
+F03,negation,I am not trying to cancel anything; I want to buy another mechanical keyboard.,place_order,cancel_order,0.809096,0.559276,guide,guide
+F04,paraphrase,Will I be charged a fee to cancel my external monitor order?,check_cancellation_fee,check_cancellation_fee,0.721585,0.610916,guide,guide
+F05,invoice_distinction,Where can I view the invoice for my wireless headset order without downloading it?,check_invoice,get_invoice,0.435359,0.613689,guide,clarify
+F06,typo,What shiping choices do you ofer for a graphics card?,delivery_options,delivery_options,0.676857,0.485374,guide,guide
+F07,paraphrase,I want to report a poor support experience after buying a laptop stand.,complaint,contact_customer_service,0.386634,0.532554,guide,clarify
+F08,paraphrase,Where can I leave a rating for the gaming mouse I bought?,review,review,0.593813,0.432793,guide,clarify
+F09,paraphrase,How do I permanently remove the account I used to buy my SSD?,delete_account,delete_account,0.945354,0.617743,guide,guide
+F10,paraphrase,The sign-up confirmation link fails while I am creating an account to buy a tablet.,registration_problems,registration_problems,0.647831,0.649401,guide,clarify
+F11,paraphrase,Can I save a second address for future laptop accessory deliveries?,set_up_shipping_address,set_up_shipping_address,0.921713,0.659403,guide,guide
+F12,paraphrase,Where can I send a question to customer support about my gaming mouse?,contact_customer_service,contact_customer_service,0.411386,0.569387,guide,clarify
+F13,ambiguous,My wireless mouse order says pending. What does that mean?,,delivery_period,0.389878,0.435147,clarify,clarify
+F14,ambiguous,I need to change something about my laptop purchase but I am unsure whether it is the item or delivery address.,,change_shipping_address,0.940146,0.668682,clarify,guide
+F15,ambiguous,Can I get it back for the SSD?,,recover_password,0.728075,0.454953,clarify,guide
+F16,ambiguous,There is a shipping problem with my graphics card.,,delivery_options,0.422959,0.614716,clarify,clarify
+F17,out_of_scope,Can you book a flight for me?,,delivery_options,0.496179,0.442004,scope_boundary,clarify
+F18,out_of_scope,Explain the causes of the French Revolution.,,place_order,0.454035,0.342699,scope_boundary,scope_boundary
+F19,out_of_scope,Translate this poem into Vietnamese.,,place_order,0.253399,0.287809,scope_boundary,scope_boundary
+F20,out_of_scope,How do I repair my laptop screen myself?,,place_order,0.284424,0.384605,scope_boundary,scope_boundary
+F21,account_distinction,I have a personal profile and a work profile for tech purchases. How do I switch between them?,switch_account,switch_account,0.997084,0.633017,guide,guide
+F22,refund_distinction,The USB-C charger is defective and I want to request my money back now. How do I start?,get_refund,get_refund,0.553521,0.573211,guide,clarify

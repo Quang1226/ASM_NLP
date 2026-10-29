@@ -1,0 +1,19 @@
+{
+  "checked_on": "2026-10-28",
+  "status": "passed",
+  "scope": "Second full G2 run in the same local environment",
+  "configurations_compared": 12,
+  "fields_compared": [
+    "experiment",
+    "C",
+    "accuracy",
+    "macro_precision",
+    "macro_recall",
+    "macro_f1",
+    "feature_count"
+  ],
+  "result": "All compared values matched exactly across the two runs.",
+  "saved_model_check": "All four saved pipelines reloaded successfully, reproduced every validation prediction, and matched their recorded model SHA-256 and macro-F1.",
+  "test_split_used": false,
+  "challenge_final_used": false
+}

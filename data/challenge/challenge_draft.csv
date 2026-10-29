@@ -1,0 +1,45 @@
+id,partition,scenario,utterance,expected_intent,expected_action,origin,review_status
+T01,tuning,paraphrase,How can I stop the order for a USB-C dock that I placed a minute ago?,cancel_order,guide,ai_assisted_draft,approved
+T02,tuning,typo,My keyboad hasnt shown up yet. Where is the shipment?,track_order,guide,ai_assisted_draft,approved
+T03,tuning,negation,I have not requested a refund for the SSD yet; I only want to know which conditions allow one.,check_refund_policy,guide,ai_assisted_draft,approved
+T04,tuning,paraphrase,Does checkout accept a debit card for a USB-C hub?,check_payment_methods,guide,ai_assisted_draft,approved
+T05,tuning,paraphrase,Please redirect my monitor shipment to my office address.,change_shipping_address,guide,ai_assisted_draft,approved
+T06,tuning,paraphrase,I am locked out of the account I use to buy SSDs. How can I reset its sign-in password?,recover_password,guide,ai_assisted_draft,approved
+T07,tuning,paraphrase,Where can I download an invoice PDF for my mechanical keyboard?,get_invoice,guide,ai_assisted_draft,approved
+T08,tuning,paraphrase,After dispatch how many days should my new monitor take to arrive?,delivery_period,guide,ai_assisted_draft,approved
+T09,tuning,paraphrase,I want to discuss my damaged graphics card with a real support person.,contact_human_agent,handoff,ai_assisted_draft,approved
+T10,tuning,typo,I keep getting promo emials about gaming keyboards. How do I stop them?,newsletter_subscription,guide,ai_assisted_draft,approved
+T11,tuning,paraphrase,I was charged for a laptop but checkout still says the payment failed.,payment_issue,guide,ai_assisted_draft,approved
+T12,tuning,paraphrase,Do I need to make a customer profile before I can buy a tablet?,create_account,guide,ai_assisted_draft,approved
+T13,tuning,ambiguous,Can you fix the gaming laptop order I placed?,,clarify,ai_assisted_draft,approved
+T14,tuning,ambiguous,I need help with the account I use to buy accessories.,,clarify,ai_assisted_draft,approved
+T15,tuning,ambiguous,What happened to the money for my headphones?,,clarify,ai_assisted_draft,approved
+T16,tuning,ambiguous,My monitor delivery is wrong.,,clarify,ai_assisted_draft,approved
+T17,tuning,out_of_scope,What will the weather be like tomorrow?,,scope_boundary,ai_assisted_draft,approved
+T18,tuning,out_of_scope,Write a Python program to sort a list.,,scope_boundary,ai_assisted_draft,approved
+T19,tuning,out_of_scope,Who won the football match last night?,,scope_boundary,ai_assisted_draft,approved
+T20,tuning,out_of_scope,Give me medical advice for a fever.,,scope_boundary,ai_assisted_draft,approved
+T21,tuning,refund_distinction,I want to submit a refund request for the USB-C charger I bought yesterday.,get_refund,guide,ai_assisted_draft,approved
+T22,tuning,account_distinction,My profile still shows my old phone number after I bought a webcam. How do I update it?,edit_account,guide,ai_assisted_draft,approved
+F01,final,paraphrase,The SSD in my laptop order is the wrong capacity. Can I change it before shipment?,change_order,guide,ai_assisted_draft,approved
+F02,final,refund_distinction,Has the refund for my wireless earbuds been sent back to my card yet?,track_refund,guide,ai_assisted_draft,approved
+F03,final,negation,I am not trying to cancel anything; I want to buy another mechanical keyboard.,place_order,guide,ai_assisted_draft,approved
+F04,final,paraphrase,Will I be charged a fee to cancel my external monitor order?,check_cancellation_fee,guide,ai_assisted_draft,approved
+F05,final,invoice_distinction,Where can I view the invoice for my wireless headset order without downloading it?,check_invoice,guide,ai_assisted_draft,approved
+F06,final,typo,What shiping choices do you ofer for a graphics card?,delivery_options,guide,ai_assisted_draft,approved
+F07,final,paraphrase,I want to report a poor support experience after buying a laptop stand.,complaint,guide,ai_assisted_draft,approved
+F08,final,paraphrase,Where can I leave a rating for the gaming mouse I bought?,review,guide,ai_assisted_draft,approved
+F09,final,paraphrase,How do I permanently remove the account I used to buy my SSD?,delete_account,guide,ai_assisted_draft,approved
+F10,final,paraphrase,The sign-up confirmation link fails while I am creating an account to buy a tablet.,registration_problems,guide,ai_assisted_draft,approved
+F11,final,paraphrase,Can I save a second address for future laptop accessory deliveries?,set_up_shipping_address,guide,ai_assisted_draft,approved
+F12,final,paraphrase,Where can I send a question to customer support about my gaming mouse?,contact_customer_service,guide,ai_assisted_draft,approved
+F13,final,ambiguous,My wireless mouse order says pending. What does that mean?,,clarify,ai_assisted_draft,approved
+F14,final,ambiguous,I need to change something about my laptop purchase but I am unsure whether it is the item or delivery address.,,clarify,ai_assisted_draft,approved
+F15,final,ambiguous,Can I get it back for the SSD?,,clarify,ai_assisted_draft,approved
+F16,final,ambiguous,There is a shipping problem with my graphics card.,,clarify,ai_assisted_draft,approved
+F17,final,out_of_scope,Can you book a flight for me?,,scope_boundary,ai_assisted_draft,approved
+F18,final,out_of_scope,Explain the causes of the French Revolution.,,scope_boundary,ai_assisted_draft,approved
+F19,final,out_of_scope,Translate this poem into Vietnamese.,,scope_boundary,ai_assisted_draft,approved
+F20,final,out_of_scope,How do I repair my laptop screen myself?,,scope_boundary,ai_assisted_draft,approved
+F21,final,account_distinction,I have a personal profile and a work profile for tech purchases. How do I switch between them?,switch_account,guide,ai_assisted_draft,approved
+F22,final,refund_distinction,The USB-C charger is defective and I want to request my money back now. How do I start?,get_refund,guide,ai_assisted_draft,approved

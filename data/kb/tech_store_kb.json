@@ -1,0 +1,319 @@
+{
+  "store": {
+    "name": "Demo Tech Store",
+    "type": "simulated consumer-technology retailer",
+    "status": "simulated",
+    "name_review_status": "approved_by_student_2026-10-28",
+    "policy_review_status": "approved_by_student_2026-10-28",
+    "intent_response_review_status": "approved_by_student_2026-10-28",
+    "disclosure": "This is a course-project demo. No real orders, payments, refunds, accounts, shipping, or human-agent connections are performed.",
+    "fallback_review_status": "approved_by_student_2026-10-28"
+  },
+  "policies": {
+    "shipping": {
+      "reference": "POL-SHIP",
+      "text": "Under the simulated store policy, standard delivery is estimated at 3–5 business days after dispatch. Express delivery, where offered, is estimated at 1–2 business days. A real checkout would show methods, costs, and a final estimate; this demo has no checkout or live carrier quotes."
+    },
+    "address_change": {
+      "reference": "POL-ADDR",
+      "text": "A delivery address change can be requested before dispatch. After dispatch, the customer must contact support; a change is not guaranteed. The chatbot cannot modify an order."
+    },
+    "cancellation": {
+      "reference": "POL-CANCEL",
+      "text": "A cancellation can be requested before dispatch with no demo cancellation fee. Once dispatched, cancellation is unavailable; the customer may review the return and refund policy. The chatbot cannot cancel an order."
+    },
+    "refund": {
+      "reference": "POL-REFUND",
+      "text": "In this simulated store, an unused accessory in its original packaging may be submitted for refund review within 14 calendar days of delivery. Defective devices are assessed through the product warranty or support process. Approval is required; the chatbot cannot approve or issue a refund. After approval, a demo refund would be sent to the original payment method in an estimated 5-10 business days."
+    },
+    "warranty_and_repair": {
+      "reference": "POL-WARRANTY",
+      "text": "Warranty coverage depends on the product and purchase terms. The demo bot can explain how to request service, but it must not give step-by-step instructions for opening, repairing, or replacing internal hardware such as a laptop screen. Customers should use qualified or authorized service."
+    },
+    "account_and_privacy": {
+      "reference": "POL-ACCOUNT",
+      "text": "In a real store, account changes use authenticated account settings or support. This demo has no customer account operations, and the chatbot cannot view or change a real account. Never ask for a password, one-time code, or full payment-card number in chat."
+    },
+    "invoice": {
+      "reference": "POL-INVOICE",
+      "text": "In a real store, a customer would view an invoice summary and download a copy from the order page. This demo has no order history or actual invoices; the bot cannot retrieve or verify a real invoice."
+    },
+    "payment": {
+      "reference": "POL-PAYMENT",
+      "text": "A real checkout lists available payment methods; this demo does not process payments. If a real charge appears after checkout fails, avoid retrying until checking the payment record and contact the seller through a verified channel with a non-sensitive reference. The bot cannot verify or reverse a charge."
+    },
+    "contact": {
+      "reference": "POL-CONTACT",
+      "text": "The demo has no live agent. A request to contact a person can be recorded as a handoff intent, but no real contact is made. Do not invent phone numbers, email addresses, or support hours."
+    }
+  },
+  "fallbacks": {
+    "clarify": {
+      "kb_reference": "KB-CLARIFY",
+      "action": "clarify",
+      "response": "Could you tell me whether you need help with an order, delivery, payment, refund, invoice, or account? Please do not share a password or full card number."
+    },
+    "handoff": {
+      "kb_reference": "KB-HANDOFF",
+      "action": "handoff",
+      "response": "I understand that you would like a person to help. This course demo has no live agent connection; please use the store's official support channel in a real purchase."
+    },
+    "scope_boundary": {
+      "kb_reference": "KB-SCOPE",
+      "action": "scope_boundary",
+      "response": "I can help with this demo technology store's orders, delivery, payments, refunds, invoices, and accounts. I cannot help with that request."
+    },
+    "hardware_repair_boundary": {
+      "kb_reference": "KB-REPAIR",
+      "action": "scope_boundary",
+      "response": "I cannot guide a do-it-yourself laptop screen repair. For safety and warranty reasons, please use qualified or authorized service. I can explain the demo warranty support route."
+    }
+  },
+  "intent_responses": [
+    {
+      "intent": "cancel_order",
+      "kb_reference": "KB-CANCEL-ORDER",
+      "action": "guide",
+      "policy_refs": [
+        "POL-CANCEL"
+      ],
+      "response": "In this demo, cancellation before dispatch has no fee. A real cancellation would need to be requested through the store’s order page or support team; I can’t cancel an order here."
+    },
+    {
+      "intent": "change_order",
+      "kb_reference": "KB-CHANGE-ORDER",
+      "action": "guide",
+      "policy_refs": [
+        "POL-CANCEL"
+      ],
+      "response": "Need to change an order item? In a real store, request the change before dispatch through support. I can’t edit orders here, and changes aren’t guaranteed."
+    },
+    {
+      "intent": "change_shipping_address",
+      "kb_reference": "KB-CHANGE-ADDRESS",
+      "action": "guide",
+      "policy_refs": [
+        "POL-ADDR"
+      ],
+      "response": "For a real order, request an address change before dispatch through support. Changes after dispatch may not be possible; I can’t update an address here."
+    },
+    {
+      "intent": "check_cancellation_fee",
+      "kb_reference": "KB-CANCEL-FEE",
+      "action": "guide",
+      "policy_refs": [
+        "POL-CANCEL"
+      ],
+      "response": "In this demo, cancellation before dispatch is free. After dispatch, cancellation isn’t available; please review the refund policy instead."
+    },
+    {
+      "intent": "check_invoice",
+      "kb_reference": "KB-VIEW-INVOICE",
+      "action": "guide",
+      "policy_refs": [
+        "POL-INVOICE"
+      ],
+      "response": "To view an invoice, a real store would show its summary on the order page. This demo has no actual invoices for me to open or verify."
+    },
+    {
+      "intent": "check_payment_methods",
+      "kb_reference": "KB-PAYMENT-METHODS",
+      "action": "guide",
+      "policy_refs": [
+        "POL-PAYMENT"
+      ],
+      "response": "A real checkout shows which payment methods are available. This demo does not take payments; please don’t share card details in chat."
+    },
+    {
+      "intent": "check_refund_policy",
+      "kb_reference": "KB-REFUND-POLICY",
+      "action": "guide",
+      "policy_refs": [
+        "POL-REFUND"
+      ],
+      "response": "In this demo, unused accessories in their original packaging may be submitted for refund review within 14 calendar days of delivery. Defective devices go through warranty support. Approval isn’t automatic."
+    },
+    {
+      "intent": "complaint",
+      "kb_reference": "KB-COMPLAINT",
+      "action": "guide",
+      "policy_refs": [
+        "POL-CONTACT"
+      ],
+      "response": "I’m sorry that happened. Tell me briefly what went wrong, without sharing passwords or full card numbers. This demo stores the chat locally but does not notify a real support team."
+    },
+    {
+      "intent": "contact_customer_service",
+      "kb_reference": "KB-CONTACT-SUPPORT",
+      "action": "guide",
+      "policy_refs": [
+        "POL-CONTACT"
+      ],
+      "response": "For a real purchase, use the seller’s verified support channel from its website or order email. This demo has no live customer service connection."
+    },
+    {
+      "intent": "contact_human_agent",
+      "kb_reference": "KB-HUMAN-AGENT",
+      "action": "handoff",
+      "policy_refs": [
+        "POL-CONTACT"
+      ],
+      "response": "I understand you’d like a person. I can’t connect a live agent. If you choose Leave contact, your details are saved only in this local demo; no real team is notified."
+    },
+    {
+      "intent": "create_account",
+      "kb_reference": "KB-CREATE-ACCOUNT",
+      "action": "guide",
+      "policy_refs": [
+        "POL-ACCOUNT"
+      ],
+      "response": "A real store would guide you through Create account and email verification. This demo has no working customer account registration. Please don’t share a password or verification code here."
+    },
+    {
+      "intent": "delete_account",
+      "kb_reference": "KB-DELETE-ACCOUNT",
+      "action": "guide",
+      "policy_refs": [
+        "POL-ACCOUNT"
+      ],
+      "response": "To delete a real account, use authenticated account settings or the seller’s verified support channel. I cannot verify or delete an account here."
+    },
+    {
+      "intent": "delivery_options",
+      "kb_reference": "KB-DELIVERY-OPTIONS",
+      "action": "guide",
+      "policy_refs": [
+        "POL-SHIP"
+      ],
+      "response": "The demo policy offers standard delivery and express delivery where available. A real checkout would show the methods, costs, and final estimate for your location; this site does not process purchases."
+    },
+    {
+      "intent": "delivery_period",
+      "kb_reference": "KB-DELIVERY-PERIOD",
+      "action": "guide",
+      "policy_refs": [
+        "POL-SHIP"
+      ],
+      "response": "After dispatch, standard delivery is estimated at 3–5 business days in this demo. Express delivery takes about 1–2 business days where offered. I can’t track a live parcel."
+    },
+    {
+      "intent": "edit_account",
+      "kb_reference": "KB-EDIT-ACCOUNT",
+      "action": "guide",
+      "policy_refs": [
+        "POL-ACCOUNT"
+      ],
+      "response": "In a real store, update profile details through authenticated account settings. This demo cannot view or change an account."
+    },
+    {
+      "intent": "get_invoice",
+      "kb_reference": "KB-DOWNLOAD-INVOICE",
+      "action": "guide",
+      "policy_refs": [
+        "POL-INVOICE"
+      ],
+      "response": "To download an invoice copy, use the order page in a real store. This demo cannot generate or send an actual invoice."
+    },
+    {
+      "intent": "get_refund",
+      "kb_reference": "KB-REQUEST-REFUND",
+      "action": "guide",
+      "policy_refs": [
+        "POL-REFUND"
+      ],
+      "response": "To request a refund for a real purchase, use the seller’s order support process and explain the reason. I can explain this demo’s policy, but I can’t submit, approve, or issue a refund."
+    },
+    {
+      "intent": "newsletter_subscription",
+      "kb_reference": "KB-NEWSLETTER",
+      "action": "guide",
+      "policy_refs": [
+        "POL-ACCOUNT"
+      ],
+      "response": "A real store usually lets you change newsletter choices in account email preferences or through an unsubscribe link. This demo cannot change a subscription."
+    },
+    {
+      "intent": "payment_issue",
+      "kb_reference": "KB-PAYMENT-ISSUE",
+      "action": "guide",
+      "policy_refs": [
+        "POL-PAYMENT"
+      ],
+      "response": "If a real checkout failed but a charge appears, avoid paying again until you check your payment record. Contact the seller through a verified channel with a non-sensitive reference; I can’t verify or reverse a charge."
+    },
+    {
+      "intent": "place_order",
+      "kb_reference": "KB-PLACE-ORDER",
+      "action": "guide",
+      "policy_refs": [
+        "POL-PAYMENT",
+        "POL-SHIP"
+      ],
+      "response": "This site showcases demo products but does not process checkout. In a real store, review your cart, shipping, and payment before confirming; I can’t place or pay for an order."
+    },
+    {
+      "intent": "recover_password",
+      "kb_reference": "KB-RECOVER-PASSWORD",
+      "action": "guide",
+      "policy_refs": [
+        "POL-ACCOUNT"
+      ],
+      "response": "Use Forgot password on the real store’s sign-in page and follow its reset instructions. This demo cannot reset passwords; never share a password or code in chat."
+    },
+    {
+      "intent": "registration_problems",
+      "kb_reference": "KB-REGISTRATION",
+      "action": "guide",
+      "policy_refs": [
+        "POL-ACCOUNT"
+      ],
+      "response": "If sign-up fails on a real store, check its email verification step or use its verified support channel. This demo cannot inspect a registration attempt; please don’t share verification codes."
+    },
+    {
+      "intent": "review",
+      "kb_reference": "KB-REVIEW",
+      "action": "guide",
+      "policy_refs": [
+        "POL-CONTACT"
+      ],
+      "response": "This demo cannot publish product reviews. For a real purchase, use the seller’s review option after the product is delivered."
+    },
+    {
+      "intent": "set_up_shipping_address",
+      "kb_reference": "KB-ADD-ADDRESS",
+      "action": "guide",
+      "policy_refs": [
+        "POL-ADDR",
+        "POL-ACCOUNT"
+      ],
+      "response": "A real store lets you save a shipping address in authenticated account settings. This demo does not save delivery addresses, and adding one would not change an existing order."
+    },
+    {
+      "intent": "switch_account",
+      "kb_reference": "KB-SWITCH-ACCOUNT",
+      "action": "guide",
+      "policy_refs": [
+        "POL-ACCOUNT"
+      ],
+      "response": "In a real store, sign out of the current account and sign in to the other one. This demo cannot switch accounts or handle your credentials."
+    },
+    {
+      "intent": "track_order",
+      "kb_reference": "KB-TRACK-ORDER",
+      "action": "guide",
+      "policy_refs": [
+        "POL-SHIP"
+      ],
+      "response": "For a real purchase, check the seller’s order page or tracking link for its latest status. This demo cannot look up a live order or shipment."
+    },
+    {
+      "intent": "track_refund",
+      "kb_reference": "KB-TRACK-REFUND",
+      "action": "guide",
+      "policy_refs": [
+        "POL-REFUND"
+      ],
+      "response": "For a real purchase, check the refund request through the seller’s order support channel. Under this demo policy, an approved refund would return to the original payment method in about 5–10 business days; I can’t check a live refund."
+    }
+  ]
+}

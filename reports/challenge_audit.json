@@ -1,0 +1,196 @@
+{
+  "cases": 44,
+  "challenge_sha256": "599a77fbd7d8a233d915a87ac28b5d54e6e52d658b52524ce7578fb0a2368c07",
+  "locked_manifest": "data/challenge/challenge_manifest.json",
+  "partition_counts": {
+    "tuning": 22,
+    "final": 22
+  },
+  "scenario_counts": {
+    "paraphrase": 17,
+    "typo": 3,
+    "negation": 2,
+    "ambiguous": 8,
+    "out_of_scope": 8,
+    "refund_distinction": 3,
+    "account_distinction": 2,
+    "invoice_distinction": 1
+  },
+  "review_status_counts": {
+    "approved": 44
+  },
+  "intent_coverage": 27,
+  "similarity_method": "maximum difflib.SequenceMatcher ratio against all Bitext instructions with the same intent",
+  "in_scope_cases_at_or_above_0_75": [],
+  "scores": [
+    {
+      "id": "T01",
+      "intent": "cancel_order",
+      "maximum_same_intent_similarity": 0.4603,
+      "closest_source": "I can't afford order {{Order Number}}, could I cancel it?"
+    },
+    {
+      "id": "T02",
+      "intent": "track_order",
+      "maximum_same_intent_similarity": 0.3883,
+      "closest_source": "i want help to check order {{Order Number}} status"
+    },
+    {
+      "id": "T03",
+      "intent": "check_refund_policy",
+      "maximum_same_intent_similarity": 0.4276,
+      "closest_source": "am I entitled to a refund according to your policy?"
+    },
+    {
+      "id": "T04",
+      "intent": "check_payment_methods",
+      "maximum_same_intent_similarity": 0.5106,
+      "closest_source": "how do I check the accepted payment methods?"
+    },
+    {
+      "id": "T05",
+      "intent": "change_shipping_address",
+      "maximum_same_intent_similarity": 0.5532,
+      "closest_source": "I can't edit my damn shipping address"
+    },
+    {
+      "id": "T06",
+      "intent": "recover_password",
+      "maximum_same_intent_similarity": 0.5833,
+      "closest_source": "I have lost my user account password, how can I reset it?"
+    },
+    {
+      "id": "T07",
+      "intent": "get_invoice",
+      "maximum_same_intent_similarity": 0.6019,
+      "closest_source": "where can I download the invoice #37777?"
+    },
+    {
+      "id": "T08",
+      "intent": "delivery_period",
+      "maximum_same_intent_similarity": 0.5397,
+      "closest_source": "where do I check how long it takes for my package to arrive?"
+    },
+    {
+      "id": "T09",
+      "intent": "contact_human_agent",
+      "maximum_same_intent_similarity": 0.5306,
+      "closest_source": "I want to chat with a person"
+    },
+    {
+      "id": "T10",
+      "intent": "newsletter_subscription",
+      "maximum_same_intent_similarity": 0.4127,
+      "closest_source": "I need information about subscribing to your newsletter"
+    },
+    {
+      "id": "T11",
+      "intent": "payment_issue",
+      "maximum_same_intent_similarity": 0.5192,
+      "closest_source": "I have a queston about the payment"
+    },
+    {
+      "id": "T12",
+      "intent": "create_account",
+      "maximum_same_intent_similarity": 0.5,
+      "closest_source": "I need to create a {{Account Category}} account for my fiance"
+    },
+    {
+      "id": "T21",
+      "intent": "get_refund",
+      "maximum_same_intent_similarity": 0.472,
+      "closest_source": "I paid {{Currency Symbol}}{{Refund Amount}} for this purchase, how can I get a rebate?"
+    },
+    {
+      "id": "T22",
+      "intent": "edit_account",
+      "maximum_same_intent_similarity": 0.4308,
+      "closest_source": "wanna modify my user account how do i do it"
+    },
+    {
+      "id": "F01",
+      "intent": "change_order",
+      "maximum_same_intent_similarity": 0.4444,
+      "closest_source": "I have to correct order {{Order Number}}, can I get some help?"
+    },
+    {
+      "id": "F02",
+      "intent": "track_refund",
+      "maximum_same_intent_similarity": 0.4651,
+      "closest_source": "I have got to see the refund current status, how do I do it?"
+    },
+    {
+      "id": "F03",
+      "intent": "place_order",
+      "maximum_same_intent_similarity": 0.4567,
+      "closest_source": "I do not know what I need to do to buy an article"
+    },
+    {
+      "id": "F04",
+      "intent": "check_cancellation_fee",
+      "maximum_same_intent_similarity": 0.5217,
+      "closest_source": "how much will you charge me for canceling the contract?"
+    },
+    {
+      "id": "F05",
+      "intent": "check_invoice",
+      "maximum_same_intent_similarity": 0.4966,
+      "closest_source": "need to locate the invoices from {{Person Name}} how do i do it"
+    },
+    {
+      "id": "F06",
+      "intent": "delivery_options",
+      "maximum_same_intent_similarity": 0.5487,
+      "closest_source": "I have to see what shipping methods you offer, how to do it?"
+    },
+    {
+      "id": "F07",
+      "intent": "complaint",
+      "maximum_same_intent_similarity": 0.4444,
+      "closest_source": "I want to file a reclamation"
+    },
+    {
+      "id": "F08",
+      "intent": "review",
+      "maximum_same_intent_similarity": 0.6337,
+      "closest_source": "were can I leave a review for your services?"
+    },
+    {
+      "id": "F09",
+      "intent": "delete_account",
+      "maximum_same_intent_similarity": 0.562,
+      "closest_source": "what do I need to do to remove the {{Account Type}} account?"
+    },
+    {
+      "id": "F10",
+      "intent": "registration_problems",
+      "maximum_same_intent_similarity": 0.4762,
+      "closest_source": "notifying of problems creating user account"
+    },
+    {
+      "id": "F11",
+      "intent": "set_up_shipping_address",
+      "maximum_same_intent_similarity": 0.5321,
+      "closest_source": "can I enter my secondary delivery address?"
+    },
+    {
+      "id": "F12",
+      "intent": "contact_customer_service",
+      "maximum_same_intent_similarity": 0.6349,
+      "closest_source": "where can I see what hours I can reach customer support?"
+    },
+    {
+      "id": "F21",
+      "intent": "switch_account",
+      "maximum_same_intent_similarity": 0.4138,
+      "closest_source": "I want to use the pro profile, can I get some help?"
+    },
+    {
+      "id": "F22",
+      "intent": "get_refund",
+      "maximum_same_intent_similarity": 0.5224,
+      "closest_source": "what do I need to do to request my money baqck?"
+    }
+  ],
+  "caveat": "A low string-similarity score does not prove that an utterance is semantically independent of the synthetic dataset. Student review remains required."
+}

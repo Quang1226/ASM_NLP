@@ -1,0 +1,24 @@
+{
+  "method": "exhaustive same-intent pair search, difflib.SequenceMatcher ratio >= 0.9; length and quick-ratio bounds prune only impossible pairs",
+  "caveat": "Exact for this string-similarity definition, but semantic paraphrases below the threshold or with different wording can still cross splits.",
+  "comparisons": {
+    "train_to_validation": {
+      "target_rows": 3491,
+      "near_matches": 0,
+      "rate": 0.0,
+      "examples": []
+    },
+    "train_to_test": {
+      "target_rows": 3447,
+      "near_matches": 0,
+      "rate": 0.0,
+      "examples": []
+    },
+    "validation_to_test": {
+      "target_rows": 3447,
+      "near_matches": 0,
+      "rate": 0.0,
+      "examples": []
+    }
+  }
+}

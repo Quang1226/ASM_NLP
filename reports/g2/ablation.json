@@ -1,0 +1,47 @@
+[
+  {
+    "variant": "full",
+    "experiment": "E3",
+    "C": 10.0,
+    "accuracy": 0.985677,
+    "macro_precision": 0.986088,
+    "macro_recall": 0.983639,
+    "macro_f1": 0.984594
+  },
+  {
+    "variant": "no_normalization",
+    "experiment": "E3",
+    "C": 10.0,
+    "accuracy": 0.985964,
+    "macro_precision": 0.986636,
+    "macro_recall": 0.983953,
+    "macro_f1": 0.985008,
+    "fit_seconds": 0.927,
+    "validation_batch_seconds": 0.646,
+    "convergence_warnings": []
+  },
+  {
+    "variant": "whitespace_tokenizer",
+    "experiment": "E3",
+    "C": 10.0,
+    "accuracy": 0.981667,
+    "macro_precision": 0.982033,
+    "macro_recall": 0.980023,
+    "macro_f1": 0.980763,
+    "fit_seconds": 1.042,
+    "validation_batch_seconds": 0.745,
+    "convergence_warnings": []
+  },
+  {
+    "variant": "no_lemmatization",
+    "experiment": "E3",
+    "C": 10.0,
+    "accuracy": 0.984532,
+    "macro_precision": 0.984257,
+    "macro_recall": 0.982172,
+    "macro_f1": 0.982922,
+    "fit_seconds": 1.102,
+    "validation_batch_seconds": 0.054,
+    "convergence_warnings": []
+  }
+]

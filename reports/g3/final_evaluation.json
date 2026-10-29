@@ -1,0 +1,88 @@
+{
+  "frozen_bundle_file": "reports/g3/frozen_bundle.json",
+  "frozen_bundle_sha256": "fb3a88dfbbed4f90ce004f1c5b07470da28ea6ef9df8ab47c60f6978fb1bc17e",
+  "test": {
+    "count": 3447,
+    "accuracy": 0.988106,
+    "macro_precision": 0.987943,
+    "macro_recall": 0.984357,
+    "macro_f1": 0.985686,
+    "error_count": 41,
+    "embedding": {
+      "split": "test",
+      "rows": 3447,
+      "dimensions": 384,
+      "split_sha256": "022a0b30621a58c04b830b2e8fda2b1e9fb800efda1d0bc508952ebdfaa3b018",
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "license": "Apache-2.0",
+      "batch_size": 64,
+      "device": "cpu",
+      "normalized": true,
+      "encode_seconds": 5.549,
+      "file": "artifacts/g3/embeddings/test-7c63d257160d5a31a518.npy",
+      "file_sha256": "5ca337489b389ea98103ab4a18dfa6aebe56092e0d24c2743399159264c7010a"
+    }
+  },
+  "challenge_final": {
+    "count": 22,
+    "inscope_count": 14,
+    "inscope_intent_correct": 11,
+    "action_correct": 13,
+    "by_action": {
+      "clarify": {
+        "correct": 2,
+        "total": 4
+      },
+      "guide": {
+        "correct": 8,
+        "total": 14
+      },
+      "scope_boundary": {
+        "correct": 3,
+        "total": 4
+      }
+    },
+    "embedding": {
+      "split": "challenge_final",
+      "rows": 22,
+      "dimensions": 384,
+      "split_sha256": "599a77fbd7d8a233d915a87ac28b5d54e6e52d658b52524ce7578fb0a2368c07",
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "license": "Apache-2.0",
+      "batch_size": 64,
+      "device": "cpu",
+      "normalized": true,
+      "encode_seconds": 0.102,
+      "file": "artifacts/g3/embeddings/challenge_final-77a3cc543004b9ed236c.npy",
+      "file_sha256": "9d2574892a0b4f741adecb7689fddc44992a54ad84b959a2162918cb2b5eced5"
+    }
+  },
+  "latency": {
+    "model_load_seconds": 0.449,
+    "device": "cpu",
+    "batch_size": 1,
+    "warmup_queries": 5,
+    "measured_queries": 50,
+    "included": "encoder + classifier + full-train cosine search + decision (not model load)",
+    "median_ms": 8.382,
+    "p95_ms": 9.5,
+    "min_ms": 7.115,
+    "max_ms": 9.951
+  },
+  "artifact_sizes_bytes": {
+    "classifier": 81519,
+    "train_embedding": 25880192
+  },
+  "platform": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.12.1"
+  },
+  "test_evaluations": 1,
+  "challenge_final_evaluations": 1,
+  "challenge_final_fully_blind": false,
+  "visibility_note": "Challenge-final rows were displayed during initial schema inspection before bundle freeze; they were not used by model or threshold selection code. Bitext test was not inspected before freeze."
+}

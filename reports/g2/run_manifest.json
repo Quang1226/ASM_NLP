@@ -1,0 +1,68 @@
+{
+  "status": "validation_only_g2",
+  "selected_from_e1_to_e4": "E3",
+  "selection_metric": "validation_macro_f1",
+  "split_version": "v1-strict-2026-10-28",
+  "split_sha256": {
+    "train": "23324901f6a6daae20751e4f45d97e267949fe7a59d5f4d6bafb73496101b6f4",
+    "validation": "537bc1652bd5379ecc728ea11768691202adbe8fbd9c59fe811e01d37721bd13"
+  },
+  "test_split_used": false,
+  "challenge_final_used": false,
+  "preprocessing": {
+    "normalize": true,
+    "tokenizer": "regex",
+    "lemmatize": true
+  },
+  "feature_config": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_features": 50000
+  },
+  "C_grid": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "labels": [
+    "cancel_order",
+    "change_order",
+    "change_shipping_address",
+    "check_cancellation_fee",
+    "check_invoice",
+    "check_payment_methods",
+    "check_refund_policy",
+    "complaint",
+    "contact_customer_service",
+    "contact_human_agent",
+    "create_account",
+    "delete_account",
+    "delivery_options",
+    "delivery_period",
+    "edit_account",
+    "get_invoice",
+    "get_refund",
+    "newsletter_subscription",
+    "payment_issue",
+    "place_order",
+    "recover_password",
+    "registration_problems",
+    "review",
+    "set_up_shipping_address",
+    "switch_account",
+    "track_order",
+    "track_refund"
+  ],
+  "versions": {
+    "python": "3.12.1",
+    "scikit_learn": "1.8.0",
+    "nltk": "3.10.4",
+    "numpy": "2.2.2",
+    "scipy": "1.17.1",
+    "joblib": "1.5.3"
+  },
+  "platform": "macOS-27.0.1-arm64-arm-64bit"
+}

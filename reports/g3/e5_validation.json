@@ -1,0 +1,95 @@
+{
+  "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "license": "Apache-2.0",
+  "model_card": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/tree/1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "encoder_input": "original instruction text, no G2 lemmatization",
+  "embedding_normalized": true,
+  "device": "cpu",
+  "batch_size": 64,
+  "split_version": "v1-strict-2026-10-28",
+  "split_hashes": {
+    "train": "23324901f6a6daae20751e4f45d97e267949fe7a59d5f4d6bafb73496101b6f4",
+    "validation": "537bc1652bd5379ecc728ea11768691202adbe8fbd9c59fe811e01d37721bd13",
+    "test": "022a0b30621a58c04b830b2e8fda2b1e9fb800efda1d0bc508952ebdfaa3b018"
+  },
+  "train_embedding": {
+    "split": "train",
+    "rows": 16849,
+    "dimensions": 384,
+    "split_sha256": "23324901f6a6daae20751e4f45d97e267949fe7a59d5f4d6bafb73496101b6f4",
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "license": "Apache-2.0",
+    "batch_size": 64,
+    "device": "cpu",
+    "normalized": true,
+    "encode_seconds": 15.992,
+    "file": "artifacts/g3/embeddings/train-8f3152cc757b8d47df54.npy",
+    "file_sha256": "417c8e996bc62a0a2468c595b0f7bcf2ad3a15620689e0f4ad2d84b5e2171c96"
+  },
+  "validation_embedding": {
+    "split": "validation",
+    "rows": 3491,
+    "dimensions": 384,
+    "split_sha256": "537bc1652bd5379ecc728ea11768691202adbe8fbd9c59fe811e01d37721bd13",
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "license": "Apache-2.0",
+    "batch_size": 64,
+    "device": "cpu",
+    "normalized": true,
+    "encode_seconds": 4.135,
+    "file": "artifacts/g3/embeddings/validation-98e4ad763c2fc513e5ec.npy",
+    "file_sha256": "98b9a17b133ef3e9c69109e98f17caa038f004ff0a41564f144f9ba605fe6064"
+  },
+  "candidates": [
+    {
+      "experiment": "E5",
+      "C": 0.1,
+      "accuracy": 0.978803,
+      "macro_precision": 0.979675,
+      "macro_recall": 0.977602,
+      "macro_f1": 0.978191,
+      "fit_seconds": 0.697
+    },
+    {
+      "experiment": "E5",
+      "C": 1.0,
+      "accuracy": 0.987683,
+      "macro_precision": 0.987729,
+      "macro_recall": 0.986984,
+      "macro_f1": 0.987204,
+      "fit_seconds": 0.351
+    },
+    {
+      "experiment": "E5",
+      "C": 10.0,
+      "accuracy": 0.990261,
+      "macro_precision": 0.989783,
+      "macro_recall": 0.990112,
+      "macro_f1": 0.989829,
+      "fit_seconds": 0.411
+    }
+  ],
+  "selected": {
+    "experiment": "E5",
+    "C": 10.0,
+    "accuracy": 0.990261,
+    "macro_precision": 0.989783,
+    "macro_recall": 0.990112,
+    "macro_f1": 0.989829,
+    "fit_seconds": 0.411,
+    "model_file": "artifacts/g3/E5_classifier.joblib",
+    "model_sha256": "2301b7d4e90ec5eb8bcb2fd80281a5ade4fc4521e860c06cfa7a1cd9379bdfd3",
+    "model_bytes": 81519
+  },
+  "versions": {
+    "python": "3.12.1",
+    "scikit_learn": "1.8.0",
+    "sentence_transformers": "6.1.0",
+    "torch": "2.11.0"
+  },
+  "test_used": false,
+  "challenge_final_used": false
+}

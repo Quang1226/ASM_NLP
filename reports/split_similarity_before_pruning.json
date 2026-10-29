@@ -1,0 +1,102 @@
+{
+  "method": "exhaustive same-intent pair search, difflib.SequenceMatcher ratio >= 0.9; real_quick_ratio and quick_ratio prune only impossible pairs",
+  "caveat": "Exact for this string-similarity definition, but semantic paraphrases below the threshold or with different wording can still cross splits.",
+  "comparisons": {
+    "train_to_validation": {
+      "target_rows": 3616,
+      "near_matches": 125,
+      "rate": 0.0346,
+      "examples": [
+        {
+          "target": "get invoice #37777",
+          "source": "getting invoice #37777",
+          "intent": "get_invoice"
+        },
+        {
+          "target": "is there a section to send feedback about ur products",
+          "source": "is there a section to send feedback about ur services",
+          "intent": "review"
+        },
+        {
+          "target": "send me the bill #85632",
+          "source": "send me bill #85632",
+          "intent": "get_invoice"
+        },
+        {
+          "target": "help me see what payment payment modalities are accepted",
+          "source": "i have to see what payment payment modalities are accepted",
+          "intent": "check_payment_methods"
+        },
+        {
+          "target": "help me reset my use pin",
+          "source": "help me resetting my user pin",
+          "intent": "recover_password"
+        }
+      ]
+    },
+    "train_to_test": {
+      "target_rows": 3607,
+      "near_matches": 133,
+      "rate": 0.0369,
+      "examples": [
+        {
+          "target": "help me recovering my user profile access key",
+          "source": "help recovering my profile access key",
+          "intent": "recover_password"
+        },
+        {
+          "target": "consumer claim against your business",
+          "source": "filing consumer claim against your business",
+          "intent": "complaint"
+        },
+        {
+          "target": "I want to send feedback for your company, can you help me?",
+          "source": "i want to send feedback for your company, help me",
+          "intent": "review"
+        },
+        {
+          "target": "help me checking the cancellation charge",
+          "source": "can ya help me checking the cancellation charges",
+          "intent": "check_cancellation_fee"
+        },
+        {
+          "target": "i dont know how to check ur payment modalities",
+          "source": "i dont know how to check  ur allowed payment modalities",
+          "intent": "check_payment_methods"
+        }
+      ]
+    },
+    "validation_to_test": {
+      "target_rows": 3607,
+      "near_matches": 31,
+      "rate": 0.0086,
+      "examples": [
+        {
+          "target": "help me to acquire some of your article",
+          "source": "help me to earn some of your article",
+          "intent": "place_order"
+        },
+        {
+          "target": "could i submit my secondary shipping address",
+          "source": "submit my secondary shipping address",
+          "intent": "set_up_shipping_address"
+        },
+        {
+          "target": "is it possible to lodge a customer claim",
+          "source": "is it possible to lodge a bloody customer claim?",
+          "intent": "complaint"
+        },
+        {
+          "target": "I am trying to sign up to your fucking newsletter",
+          "source": "i am trying to sign up to your newsletter",
+          "intent": "newsletter_subscription"
+        },
+        {
+          "target": "my shipping address has changed, I want to edit it",
+          "source": "my address has changed, i want to edit it",
+          "intent": "change_shipping_address"
+        }
+      ]
+    }
+  }
+}

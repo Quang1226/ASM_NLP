@@ -1,0 +1,15 @@
+{
+  "challenge_version": "v1-approved-2026-10-28",
+  "status": "approved_by_student_before_model_training",
+  "file": "data/challenge/challenge_draft.csv",
+  "sha256": "599a77fbd7d8a233d915a87ac28b5d54e6e52d658b52524ce7578fb0a2368c07",
+  "source_dataset_sha256": "6f81102b0100b97b8468eb04368033a23206bf1fde9d53500d5806ec1001a434",
+  "approved_on": "2026-10-28",
+  "approval_basis": "Student reviewed the 44/44 challenge cases and confirmed they meet the intended standard in the project conversation.",
+  "case_count": 44,
+  "partitions": {
+    "tuning": 22,
+    "final": 22
+  },
+  "use_rule": "The final partition is reserved for evaluation after the model and decision threshold are frozen."
+}

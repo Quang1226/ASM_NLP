@@ -1,0 +1,318 @@
+{
+  "split_version": "v1-strict-2026-10-28",
+  "status": "frozen_before_model_training",
+  "source_sha256": "6f81102b0100b97b8468eb04368033a23206bf1fde9d53500d5806ec1001a434",
+  "seed": 42,
+  "strategy": "Unicode/case/punctuation/whitespace deduplication, approximate near-duplicate grouping within each intent, then group-aware allocation toward 70/15/15",
+  "near_duplicate_method": {
+    "candidate_search": "16 rarest character 4-grams per sentence",
+    "verification": "difflib.SequenceMatcher ratio",
+    "threshold": 0.9,
+    "scope": "within intent"
+  },
+  "raw_rows": 26872,
+  "unique_rows": 24072,
+  "removed_duplicate_rows": 2800,
+  "counts": {
+    "train": 16849,
+    "validation": 3491,
+    "test": 3447
+  },
+  "intent_counts": {
+    "train": {
+      "cancel_order": 295,
+      "change_order": 593,
+      "change_shipping_address": 671,
+      "check_cancellation_fee": 650,
+      "check_invoice": 636,
+      "check_payment_methods": 692,
+      "check_refund_policy": 679,
+      "complaint": 698,
+      "contact_customer_service": 683,
+      "contact_human_agent": 678,
+      "create_account": 607,
+      "delete_account": 628,
+      "delivery_options": 449,
+      "delivery_period": 691,
+      "edit_account": 536,
+      "get_invoice": 614,
+      "get_refund": 633,
+      "newsletter_subscription": 688,
+      "payment_issue": 694,
+      "place_order": 692,
+      "recover_password": 691,
+      "registration_problems": 692,
+      "review": 694,
+      "set_up_shipping_address": 692,
+      "switch_account": 563,
+      "track_order": 531,
+      "track_refund": 479
+    },
+    "validation": {
+      "cancel_order": 62,
+      "change_order": 124,
+      "change_shipping_address": 136,
+      "check_cancellation_fee": 133,
+      "check_invoice": 134,
+      "check_payment_methods": 141,
+      "check_refund_policy": 141,
+      "complaint": 141,
+      "contact_customer_service": 143,
+      "contact_human_agent": 140,
+      "create_account": 123,
+      "delete_account": 134,
+      "delivery_options": 92,
+      "delivery_period": 144,
+      "edit_account": 111,
+      "get_invoice": 127,
+      "get_refund": 132,
+      "newsletter_subscription": 138,
+      "payment_issue": 145,
+      "place_order": 147,
+      "recover_password": 145,
+      "registration_problems": 146,
+      "review": 144,
+      "set_up_shipping_address": 146,
+      "switch_account": 115,
+      "track_order": 106,
+      "track_refund": 101
+    },
+    "test": {
+      "cancel_order": 63,
+      "change_order": 119,
+      "change_shipping_address": 137,
+      "check_cancellation_fee": 130,
+      "check_invoice": 131,
+      "check_payment_methods": 139,
+      "check_refund_policy": 136,
+      "complaint": 139,
+      "contact_customer_service": 139,
+      "contact_human_agent": 139,
+      "create_account": 124,
+      "delete_account": 132,
+      "delivery_options": 94,
+      "delivery_period": 144,
+      "edit_account": 110,
+      "get_invoice": 127,
+      "get_refund": 133,
+      "newsletter_subscription": 133,
+      "payment_issue": 147,
+      "place_order": 141,
+      "recover_password": 143,
+      "registration_problems": 145,
+      "review": 146,
+      "set_up_shipping_address": 139,
+      "switch_account": 110,
+      "track_order": 105,
+      "track_refund": 102
+    }
+  },
+  "group_stats_by_intent": {
+    "cancel_order": {
+      "groups": 81,
+      "largest_group": 168,
+      "train": 295,
+      "validation": 63,
+      "test": 63
+    },
+    "change_order": {
+      "groups": 305,
+      "largest_group": 278,
+      "train": 593,
+      "validation": 127,
+      "test": 127
+    },
+    "change_shipping_address": {
+      "groups": 535,
+      "largest_group": 26,
+      "train": 671,
+      "validation": 144,
+      "test": 144
+    },
+    "check_cancellation_fee": {
+      "groups": 349,
+      "largest_group": 115,
+      "train": 650,
+      "validation": 140,
+      "test": 139
+    },
+    "check_invoice": {
+      "groups": 472,
+      "largest_group": 61,
+      "train": 636,
+      "validation": 136,
+      "test": 136
+    },
+    "check_payment_methods": {
+      "groups": 453,
+      "largest_group": 136,
+      "train": 692,
+      "validation": 148,
+      "test": 148
+    },
+    "check_refund_policy": {
+      "groups": 243,
+      "largest_group": 466,
+      "train": 679,
+      "validation": 146,
+      "test": 145
+    },
+    "complaint": {
+      "groups": 388,
+      "largest_group": 118,
+      "train": 698,
+      "validation": 150,
+      "test": 149
+    },
+    "contact_customer_service": {
+      "groups": 264,
+      "largest_group": 181,
+      "train": 683,
+      "validation": 146,
+      "test": 146
+    },
+    "contact_human_agent": {
+      "groups": 506,
+      "largest_group": 104,
+      "train": 678,
+      "validation": 146,
+      "test": 145
+    },
+    "create_account": {
+      "groups": 385,
+      "largest_group": 48,
+      "train": 607,
+      "validation": 130,
+      "test": 130
+    },
+    "delete_account": {
+      "groups": 362,
+      "largest_group": 79,
+      "train": 628,
+      "validation": 135,
+      "test": 135
+    },
+    "delivery_options": {
+      "groups": 451,
+      "largest_group": 14,
+      "train": 449,
+      "validation": 96,
+      "test": 96
+    },
+    "delivery_period": {
+      "groups": 303,
+      "largest_group": 164,
+      "train": 691,
+      "validation": 148,
+      "test": 148
+    },
+    "edit_account": {
+      "groups": 266,
+      "largest_group": 146,
+      "train": 536,
+      "validation": 115,
+      "test": 115
+    },
+    "get_invoice": {
+      "groups": 288,
+      "largest_group": 180,
+      "train": 614,
+      "validation": 132,
+      "test": 131
+    },
+    "get_refund": {
+      "groups": 601,
+      "largest_group": 26,
+      "train": 633,
+      "validation": 136,
+      "test": 136
+    },
+    "newsletter_subscription": {
+      "groups": 264,
+      "largest_group": 250,
+      "train": 688,
+      "validation": 147,
+      "test": 147
+    },
+    "payment_issue": {
+      "groups": 348,
+      "largest_group": 437,
+      "train": 694,
+      "validation": 149,
+      "test": 149
+    },
+    "place_order": {
+      "groups": 721,
+      "largest_group": 47,
+      "train": 692,
+      "validation": 149,
+      "test": 148
+    },
+    "recover_password": {
+      "groups": 748,
+      "largest_group": 10,
+      "train": 691,
+      "validation": 148,
+      "test": 148
+    },
+    "registration_problems": {
+      "groups": 559,
+      "largest_group": 24,
+      "train": 692,
+      "validation": 149,
+      "test": 148
+    },
+    "review": {
+      "groups": 685,
+      "largest_group": 16,
+      "train": 694,
+      "validation": 149,
+      "test": 149
+    },
+    "set_up_shipping_address": {
+      "groups": 426,
+      "largest_group": 91,
+      "train": 692,
+      "validation": 149,
+      "test": 148
+    },
+    "switch_account": {
+      "groups": 240,
+      "largest_group": 134,
+      "train": 563,
+      "validation": 121,
+      "test": 121
+    },
+    "track_order": {
+      "groups": 145,
+      "largest_group": 309,
+      "train": 531,
+      "validation": 114,
+      "test": 114
+    },
+    "track_refund": {
+      "groups": 418,
+      "largest_group": 26,
+      "train": 479,
+      "validation": 103,
+      "test": 102
+    }
+  },
+  "pre_pruning_counts": {
+    "train": 16849,
+    "validation": 3616,
+    "test": 3607
+  },
+  "cross_split_near_duplicates_excluded": {
+    "validation_similar_to_train": 125,
+    "test_similar_to_train": 133,
+    "test_similar_to_validation": 27
+  },
+  "normalized_exact_overlap": 0,
+  "limitation": "The final holdouts have no cross-split same-intent matches at SequenceMatcher >= 0.90, but lower-similarity paraphrases and cross-intent semantic ambiguity can remain. Large connected groups also make per-class sizes uneven.",
+  "output_sha256": {
+    "train": "23324901f6a6daae20751e4f45d97e267949fe7a59d5f4d6bafb73496101b6f4",
+    "validation": "537bc1652bd5379ecc728ea11768691202adbe8fbd9c59fe811e01d37721bd13",
+    "test": "022a0b30621a58c04b830b2e8fda2b1e9fb800efda1d0bc508952ebdfaa3b018"
+  }
+}
